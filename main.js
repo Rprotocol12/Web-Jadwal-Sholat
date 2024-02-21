@@ -12,7 +12,7 @@ tampilKota.textContent = localStorage.judulkota;
 
 
 function getjadwalsholat(){
-    fetch('https://api.myquran.com/v2/sholat/jadwal/'+ parseInt(localStorage.idkota) + '/' + getThn + '/' + getBln + '/' + getHari)
+    fetch('https://api.myquran.com/v2/sholat/jadwal/'+ localStorage.idkota + '/' + getThn + '/' + getBln + '/' + getHari)
         .then(response => response.json())
         .then(data => {
             const jadwal = data.data.jadwal;
